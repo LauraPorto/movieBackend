@@ -1,26 +1,27 @@
 {
-  "name": "moviebackend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LauraPorto/movieBackend.git"
-  },
-  "author": "Laura Porto Castro",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LauraPorto/movieBackend/issues"
-  },
-  "homepage": "https://github.com/LauraPorto/movieBackend#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "mongoose": "^5.11.17"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
-  }
+    "name": "moviebackend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node app.js",
+        "dev": "nodemon app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/LauraPorto/movieBackend.git"
+    },
+    "author": "Laura Porto Castro",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/LauraPorto/movieBackend/issues"
+    },
+    "homepage": "https://github.com/LauraPorto/movieBackend#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "mongoose": "^5.11.17"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.7"
+    }
 }
