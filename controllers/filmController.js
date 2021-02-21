@@ -1,4 +1,4 @@
-const filmDatabase = require("../storage/filmDb");
+const filmDatabase = require("../filmDb");
 const filmModel = require("../models/film");
 
 
@@ -6,5 +6,4 @@ const filmModel = require("../models/film");
 
 
 
-
-module.exports = filmModel;
+module.exports = filmController;

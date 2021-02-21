@@ -1,8 +1,9 @@
 const express = require("express");
-const filmDb = require("./storage/filmDb");
+const filmDb = require("./filmDb");
 
 const app = express();
 const port = 3000;
+
 
 app.use(express.json());
 

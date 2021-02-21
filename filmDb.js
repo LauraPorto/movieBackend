@@ -13,7 +13,7 @@ const QUERY_STRING = MONGO_USER ?
     `mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_HOST}:${MONGO_PORT}/${MONGO_DBNAME}` :
     `mongodb://${MONGO_HOST}:${MONGO_PORT}/${MONGO_DBNAME}`;
 
-mongoose.connect(QUERY_STRING, { userNewUrlParser: true, useUnifiedTopology: true })
+const filmDb = mongoose.connect(QUERY_STRING, { userNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         logger("Conexión establecida")
     }).catch(error => {

@@ -1,4 +1,4 @@
-const filmDatabase = require("../storage/filmDb");
+const filmDatabase = require("../filmDb");
 const userModel = require("../models/user");
 
 
