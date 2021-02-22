@@ -1,2 +1,2 @@
 const mongoose = require('mongoose');
-const filmModel = require("../models/film");
+const Film = require("../models/film");
