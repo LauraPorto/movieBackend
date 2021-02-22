@@ -19,6 +19,7 @@
     "homepage": "https://github.com/LauraPorto/movieBackend#readme",
     "dependencies": {
         "express": "^4.17.1",
+        "mongoku": "^1.3.0",
         "mongoose": "^5.11.17"
     },
     "devDependencies": {

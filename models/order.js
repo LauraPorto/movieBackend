@@ -1,4 +1,4 @@
-const filmDatabase = require("../filmDb");
+const mongoose = require('mongoose');
 
 //const mongoose = require("mongoose");
 const ObjectId = mongoose.Types.ObjectId;
@@ -23,5 +23,5 @@ let orderSchema = mongoose.Schema({
     }
 });
 
-const order = mongoose.model("order", orderSchema);
-module.exports = order;
+const Order = mongoose.model("order", orderSchema);
+module.exports = Order;

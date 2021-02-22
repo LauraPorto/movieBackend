@@ -7,4 +7,4 @@ const userModel = require("../models/user");
 
 
 
-module.exports = userController;
+//module.exports = userController;

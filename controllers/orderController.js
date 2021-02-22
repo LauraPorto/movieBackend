@@ -7,4 +7,4 @@ const oderModel = require("../models/order");
 
 
 
-module.exports = orderController;
+//module.exports = orderController;

@@ -1,4 +1,5 @@
 //const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const filmDatabase = require("../filmDb");
 
 const ObjectId = mongoose.Types.ObjectId;
@@ -33,5 +34,5 @@ let filmSchema = mongoose.Schema({
 })
 
 
-const film = mongoose.model("film", filmSchema);
-module.exports = film;
+const Film = mongoose.model("film", filmSchema);
+module.exports = Film;
