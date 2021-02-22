@@ -1,13 +1,6 @@
 const mongoose = require('mongoose');
 
-//const mongoose = require("mongoose");
-const ObjectId = mongoose.Types.ObjectId;
-
 let orderSchema = mongoose.Schema({
-    id: {
-        type: ObjectId,
-        required: true
-    },
     filmId: {
         type: String,
         required: true

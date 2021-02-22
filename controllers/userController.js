@@ -1,54 +1,34 @@
 const mongoose = require('mongoose');
 const User = require("../models/user");
 
-class UserController {
+class Client {
 
     constructor() {
 
     };
 
-    async register(x) {
-        try {
-
-        } catch {
-
-        }
+    async register(user) {
+        return User.create(user);
     };
 
     async findUserById(id) {
-        try {
-
-        } catch {
-
-        }
+        return User.findById(id);
     };
 
     async indexAllUsers() {
-        try {
-
-        } catch {
-
-        }
+        return User.find();
     };
 
-    async updateUser(id, x) {
-        try {
-
-        } catch {
-
-        }
+    async updateUser(id) {
+        return User.findByIdAndUpdate(id);
     };
 
     async destroyUser(id) {
-        try {
-
-        } catch {
-
-        }
+        return User.findOneAndDelete(id);
     };
 }
 
 
 
-
-module.exports = UserController;
+let userController = new Client();
+module.exports = userController;

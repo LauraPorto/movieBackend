@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Order = require("../models/order");
 
-class oderController {
+class OderController {
 
 };
 
@@ -12,11 +12,7 @@ class oderController {
 
 - Alquilar película
 
-- Dar de alta un usuario (Post) - Create
-- Traer datos del usuario (Get) - Find
-- Traer ID (Get) - FindById
-- Modificar datos usuario (Put) - Save/Update
-- Borar datos (Delete) - Remove
+
 
 */
 
@@ -24,4 +20,4 @@ class oderController {
 
 
 
-//module.exports = orderController;
+//module.exports = OrderController;

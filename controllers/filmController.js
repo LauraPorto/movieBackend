@@ -1,63 +1,40 @@
 const mongoose = require('mongoose');
 const Film = require("../models/film");
 
-class FilmController {
+class Movie {
 
     constructor() {
 
     };
 
-    async store(x) {
-        try {
-
-        } catch {
-
-        }
+    async store(film) {
+        return Film.create(film);
     };
 
-    async indexAllFilms() {
-        try {
-
-        } catch {
-
-        }
+    async indexAllFilms(filmCollection) {
+        return Film.find(filmCollection);
     };
 
     async findFilmById(id) {
-        try {
-
-        } catch {
-
-        }
+        return Film.findById(id);
     };
 
     async findByTitle(title) {
-        try {
-
-        } catch {
-
-        }
+        return Film.findOne(title);
     };
 
     async destroyFilm(id) {
-        try {
-
-        } catch {
-
-        }
+        return Film.findByIdAndDelete(id);
     };
 
-    async updateFilm(id, x) {
-        try {
-
-        } catch {
-
-        }
+    async updateFilm(id) {
+        return Film.findByIdAndUpdate(id);
     };
 
 };
 
-module.exports = FilmController;
+let filmController = new Movie();
+module.exports = filmController;
 
 // - Todas las películas (Get) - Find
 // - Find by ID (Get) - FindById
