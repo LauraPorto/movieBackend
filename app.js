@@ -2,8 +2,8 @@ const express = require("express");
 const filmDb = require("./filmDb");
 
 const app = express();
-//const port = process.env.PORT || 8081;
-const port = 3000;
+const port = process.env.PORT || 3000;
+//const port = 3000;
 
 
 app.use(express.json());
@@ -15,9 +15,9 @@ let filmRouter = require("./routers/filmRouter");
 let userRouter = require("./routers/userRouter");
 let orderRouter = require("./routers/orderRouter");
 
-app.use("/film", filmRouter);
-app.use("/user", userRouter);
-app.use("/order", orderRouter);
+app.use(filmRouter);
+app.use(userRouter);
+app.use(orderRouter);
 
 
 //Levantamos servidor

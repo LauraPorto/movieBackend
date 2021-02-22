@@ -1,5 +1,5 @@
 const filmRouter = require("express").Router();
-const filmController = require("../controllers/filmController");
+const FilmController = require("../controllers/filmController");
 const Film = require("../models/film");
 
 //ENDPOINTS CRUD
@@ -7,7 +7,7 @@ const Film = require("../models/film");
 //Traer todas las peliculas
 filmRouter.get('/allmovies', async(req, res) => {
     try {
-        res.json(await filmController.indexAll());
+        res.json(await FilmController.indexAllFilms());
     } catch (error) {
         return res.sendStatus(500).json({
             message: "Server Error"
@@ -15,10 +15,34 @@ filmRouter.get('/allmovies', async(req, res) => {
     }
 });
 
-//Guardar/añadir una película (save)
-filmRouter.post('/', async(req, res) => {
+//Traer películas por ID
+filmRouter.get('/:id', async(req, res) => {
     try {
-        const id = await filmController.store(new Film(req.body));
+        const id = req.params.id;
+        res.json(await FilmController.findFilmById(id));
+    } catch (error) {
+        return res.sendStatus(500).json({
+            message: "Server Error"
+        });
+    };
+});
+
+//Traer películas por Título
+filmRouter.get('/title', async(req, res) => {
+    try {
+        const title = req.params.title;
+        res.json(await FilmController.findByTitle(title));
+    } catch (error) {
+        return res.sendStatus(500).json({
+            message: "Server Error"
+        });
+    };
+});
+
+//Guardar/añadir una película (save)
+filmRouter.post('/add', async(req, res) => {
+    try {
+        const id = await FilmController.store(new Film(req.body));
         const status = "success";
         res.json({ status, id });
     } catch (error) {
@@ -33,7 +57,7 @@ filmRouter.delete('/:id', async(req, res) => {
     try {
         const id = req.params.id;
         const status = "deleted";
-        await filmController.destroy(id);
+        await FilmController.destroyFilm(id);
         res.json({ status, id });
     } catch (error) {
         return res.sendStatus(500).json({
@@ -46,8 +70,8 @@ filmRouter.delete('/:id', async(req, res) => {
 filmRouter.put('/:id', async(req, res) => {
     try {
         const id = req.params.id;
-        res.json(await filmController.update(id, new Film(req.body)))
-    } catch {
+        res.json(await FilmController.updateFilm(id, new Film(req.body)))
+    } catch (error) {
         return res.sendStatus(500).json({
             message: "Server Error"
         });
