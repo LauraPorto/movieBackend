@@ -20,8 +20,9 @@ userRouter.get('/allUsers', async(req, res) => {
 //Usuario por ID
 userRouter.get('/userId', async(req, res) => {
     try {
-        const id = req.params.id;
-        res.json(await userController.findUserById(id));
+        const _id = req.params.id;
+        let resultado = await userController.findUserById(_id);
+        res.json(resultado);
     } catch (error) {
         return status(500).json({
             message: "Server Error"

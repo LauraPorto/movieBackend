@@ -89,54 +89,30 @@ filmRouter.delete('/delete/:id', async(req, res) => {
 });
 
 //Modificar los datos de una película (update)
-filmRouter.put('/update/id:id', async(req, res) => {
+// filmRouter.put('/update/id/:id', async(req, res) => {
+//     try {
+//         console.log('Tamos dentro');
+//         const id = req.params.id;
+//         let resultado = await filmController.updateFilm(id, req.body);
+//         res.json(resultado);
+//     } catch (error) {
+//         return res.status(500).json({
+//             message: "Server Error"
+//         });
+//     };
+// });
+
+filmRouter.put('/update-film/:id', async(req, res) => {
     try {
         const _id = req.params.id;
-        res.json(await filmController.updateFilm(_id, new Movie(req.body)))
+        res.json(await filmController.updateFilm(_id, req.body));
     } catch (error) {
         return res.status(500).json({
-            message: "Server Error"
+            message: 'Internal Server Error'
         });
-    };
+    }
 });
 
 
 
 module.exports = filmRouter;
-
-
-
-/*
-
-const rentalSchema = {
-    ownerId: {
-        type: ObjectId,
-        required: true
-    }, 
-    dateIni: Date, 
-    dateEnd: Date,
-    movieReference: {
-        type: ObjectId, 
-        required: true
-    }
-};
-
-IN CONTROLLER
-Movie.find().limit(10).then(movies) => {
-    return movie.map (async (mmovie) => {
-        movie.owner = await User.findById(movie.owner);
-    })
-    return Movie.find.limit(10);
-};
-
-Esto es un modo de controlar la relación pedido-cliente. 
-Aunque podríamos prescindir de él simplemente con el modelo rental
-
-*/
-
-/*
-
-router.user('/:id/cars') -- le digo que use el router de car.
-Recurso car del usuario ID.
-Así, me llevan a los cars de un usuario simpleente escribiendo esto al final del routes de car. Así, de manera anidada, podríamos acceder por URL mediante Postman.
-*/

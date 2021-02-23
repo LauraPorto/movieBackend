@@ -20,15 +20,16 @@ class Movie {
     };
 
     async findByTitle(title) {
-        return Film.findOne(title);
+        return Film.findOne({ title: title });
     };
 
     async destroyFilm(id) {
         return Film.findByIdAndDelete(id);
     };
 
-    async updateFilm(id) {
-        return Film.findByIdAndUpdate(id);
+    async updateFilm(id, movie) {
+        const idFound = Film.findOne({ _id: id });
+        return idFound.update(movie);
     };
 
 };
@@ -42,3 +43,9 @@ module.exports = filmController;
 // - Añadir película (Post) - Create
 // - Modificar una película que ya existe (Put) - Update
 // - Find by titulo (Get) - FindByTitle
+
+// async findOneFilm(title) {
+//     console.log('estamos aquiiiiii', title);
+//     const titleFound = film.findOne({ title: title })
+//     return titleFound;
+// }
