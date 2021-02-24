@@ -26,7 +26,7 @@ let orderSchema = mongoose.Schema({
     },
     price: {
         type: String,
-        default: "5 eu"
+        default: "5eu"
     }
 });
 

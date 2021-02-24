@@ -6,7 +6,7 @@ const User = require("../models/user");
 //ENDPOINTS CRUD
 
 //Todos los usuarios
-userRouter.get('users/allUsers', async(req, res) => {
+userRouter.get('/users/allUsers', async(req, res) => {
     try {
         let resultado = await userController.indexAllUsers();
         res.json(resultado);
@@ -45,12 +45,12 @@ userRouter.post('/register', async(req, res) => {
 });
 
 //Borrar usuario por ID
-userRouter.delete('delete-user/:id', async(req, res) => {
+userRouter.delete('/delete-user/:id', async(req, res) => {
     try {
         console.log("Tamos dentro");
         const id = req.params.id;
         const status = "deleted";
-        let resultado = await userController.destroyUser(_id);
+        let resultado = await userController.destroyUser(id);
         res.json({ resultado, status });
     } catch (error) {
         return status(500).json({
@@ -60,7 +60,7 @@ userRouter.delete('delete-user/:id', async(req, res) => {
 });
 
 //Modificar datos usuario
-userRouter.put('update-user/:id', async(req, res) => {
+userRouter.put('/update-user/:id', async(req, res) => {
     try {
         const id = req.params.id;
         const status = "success";

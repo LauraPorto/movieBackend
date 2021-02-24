@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://e7.pngegg.com/pngimages/755/580/png-clipart-clapperboard-film-computer-icons-mp4-icon-television-photography.png" alt="Project logo"></a>
+ <img width=200px height=200px src="https://c0.klipartz.com/pngpicture/775/621/gratis-png-claqueta-cine-cine-ordenador-iconos-juntas-corporativas.png" alt="Project logo"></a>
 </p>
 
 <h3 align="center">movieBackend</h3>
@@ -34,13 +34,20 @@
 
 ## 🧐 About <a name = "about"></a>
 
+
 Write about 1-2 paragraphs describing the purpose of your project.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/4cfcfe2c5fe3a1894bc2)
+
+https://documenter.getpostman.com/view/14551978/TWDamauM
+
 ### Prerequisites
+
+Para poder ejecutar este programa es necesario tener instaladas las herramientas de Postman
 
 What things you need to install the software and how to install them.
 
@@ -98,12 +105,17 @@ Add additional notes about how to deploy this on a live system.
 
 - [MongoDB](https://www.mongodb.com/) - Database
 - [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
+- [Mongoose](https://mongoosejs.com/) - ODM
 - [NodeJs](https://nodejs.org/en/) - Server Environment
+- [Postman](https://www.postman.com/) -
+- [Docker](https://www.docker.com/) - 
+- [JavaScript](https://www.javascript.com/) - 
+- [Nodemon](https://nodemon.io/) - 
+- [Git](https://git-scm.com/) - 
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+- [@LauraPorto](https://github.com/LauraPorto) - Idea & Initial work
 
 See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
 
