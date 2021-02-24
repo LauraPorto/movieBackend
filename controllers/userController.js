@@ -19,12 +19,14 @@ class Client {
         return User.find();
     };
 
-    async updateUser(id) {
-        return User.findByIdAndUpdate(id);
+    async updateUser(id, user) {
+        //return User.findByIdAndUpdate(id);
+        const userFound = User.findOne({ _id: id });
+        return userFound.update(user);
     };
 
     async destroyUser(id) {
-        return User.findOneAndDelete(id);
+        return User.findByIdAndDelete(id);
     };
 }
 

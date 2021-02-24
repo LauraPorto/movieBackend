@@ -6,9 +6,10 @@ const User = require("../models/user");
 //ENDPOINTS CRUD
 
 //Todos los usuarios
-userRouter.get('/allUsers', async(req, res) => {
+userRouter.get('users/allUsers', async(req, res) => {
     try {
-        res.json(await userController.indexAllUsers());
+        let resultado = await userController.indexAllUsers();
+        res.json(resultado);
     } catch (error) {
         return status(500).json({
             message: "Server Error"
@@ -18,7 +19,7 @@ userRouter.get('/allUsers', async(req, res) => {
 
 
 //Usuario por ID
-userRouter.get('/userId', async(req, res) => {
+userRouter.get('/userId/:id', async(req, res) => {
     try {
         const _id = req.params.id;
         let resultado = await userController.findUserById(_id);
@@ -33,9 +34,9 @@ userRouter.get('/userId', async(req, res) => {
 //Registro usuario
 userRouter.post('/register', async(req, res) => {
     try {
-        const id = res.json(await userController.register(new User(req.body)));
+        const newUser = await userController.register(req.body);
         const status = "success";
-        res.json({ id, status });
+        res.json({ newUser, status });
     } catch (error) {
         return status(500).json({
             message: "Server Error"
@@ -44,12 +45,13 @@ userRouter.post('/register', async(req, res) => {
 });
 
 //Borrar usuario por ID
-userRouter.delete('/:id', async(req, res) => {
+userRouter.delete('delete-user/:id', async(req, res) => {
     try {
-        const id = req.params.id;
+        console.log("Tamos dentro");
+        const _id = req.params.id;
         const status = "deleted";
-        await UserController.destroyUser(id);
-        res.json({ id, status });
+        let resultado = await userController.destroyUser(_id);
+        res.json({ resultado, status });
     } catch (error) {
         return status(500).json({
             message: "Server Error"
@@ -58,12 +60,14 @@ userRouter.delete('/:id', async(req, res) => {
 });
 
 //Modificar datos usuario
-userRouter.put('/:id', async(req, res) => {
+userRouter.put('update-user/:id', async(req, res) => {
     try {
-        const id = req.params.id;
-        const status = "success";
-        await userController.updateUser(id, new Client(req.body));
-        res.json({ id, status });
+        // const id = req.params.id;
+        // const status = "success";
+        // await userController.updateUser(id, new Client(req.body));
+        // res.json({ id, status });
+        const _id = req.params.id;
+        res.json(await filmController.updateUser(_id, req.body));
     } catch (error) {
         return status(500).json({
             message: "Server Error"

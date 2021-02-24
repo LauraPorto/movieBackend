@@ -40,26 +40,6 @@ filmRouter.get('/films/title/:title', async(req, res) => {
     };
 });
 
-/* routerFilms.get('/films/title/:title', async(req, res) => {
-    try {
-        const zapato = req.params.title;
-
-        let resultado = await filmController.findOneFilm(zapato);
-
-        res.json(resultado)
-    } catch (error) {
-        return res.sendStatus(500).json({
-            message: 'Internal Server Error'
-        });
-    }
-
-});
- async findOneFilm(title) {
-        console.log('estamos aquiiiiii', title);
-        const titleFound = film.findOne({ title: title })
-        return titleFound;
-    }
-} */
 
 //Guardar/añadir una película (save)
 filmRouter.post('/add', async(req, res) => {
@@ -87,20 +67,6 @@ filmRouter.delete('/delete/:id', async(req, res) => {
         });
     };
 });
-
-//Modificar los datos de una película (update)
-// filmRouter.put('/update/id/:id', async(req, res) => {
-//     try {
-//         console.log('Tamos dentro');
-//         const id = req.params.id;
-//         let resultado = await filmController.updateFilm(id, req.body);
-//         res.json(resultado);
-//     } catch (error) {
-//         return res.status(500).json({
-//             message: "Server Error"
-//         });
-//     };
-// });
 
 filmRouter.put('/update-film/:id', async(req, res) => {
     try {

@@ -36,16 +36,3 @@ class Movie {
 
 let filmController = new Movie();
 module.exports = filmController;
-
-// - Todas las películas (Get) - Find
-// - Find by ID (Get) - FindById
-// - Delete by ID (Delete) - Remove
-// - Añadir película (Post) - Create
-// - Modificar una película que ya existe (Put) - Update
-// - Find by titulo (Get) - FindByTitle
-
-// async findOneFilm(title) {
-//     console.log('estamos aquiiiiii', title);
-//     const titleFound = film.findOne({ title: title })
-//     return titleFound;
-// }
