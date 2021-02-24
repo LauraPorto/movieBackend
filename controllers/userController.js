@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const User = require("../models/user");
 
-class Client {
+class UserController {
 
     constructor() {
 
@@ -32,5 +32,5 @@ class Client {
 
 
 
-let userController = new Client();
+let userController = new UserController();
 module.exports = userController;

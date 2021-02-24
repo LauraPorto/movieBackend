@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Film = require("../models/film");
 
-class Movie {
+class FilmController {
 
     constructor() {
 
@@ -34,5 +34,5 @@ class Movie {
 
 };
 
-let filmController = new Movie();
+let filmController = new FilmController();
 module.exports = filmController;

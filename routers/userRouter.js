@@ -21,8 +21,8 @@ userRouter.get('users/allUsers', async(req, res) => {
 //Usuario por ID
 userRouter.get('/userId/:id', async(req, res) => {
     try {
-        const _id = req.params.id;
-        let resultado = await userController.findUserById(_id);
+        const id = req.params.id;
+        let resultado = await userController.findUserById(id);
         res.json(resultado);
     } catch (error) {
         return status(500).json({
@@ -48,7 +48,7 @@ userRouter.post('/register', async(req, res) => {
 userRouter.delete('delete-user/:id', async(req, res) => {
     try {
         console.log("Tamos dentro");
-        const _id = req.params.id;
+        const id = req.params.id;
         const status = "deleted";
         let resultado = await userController.destroyUser(_id);
         res.json({ resultado, status });
@@ -62,12 +62,10 @@ userRouter.delete('delete-user/:id', async(req, res) => {
 //Modificar datos usuario
 userRouter.put('update-user/:id', async(req, res) => {
     try {
-        // const id = req.params.id;
-        // const status = "success";
-        // await userController.updateUser(id, new Client(req.body));
-        // res.json({ id, status });
-        const _id = req.params.id;
-        res.json(await filmController.updateUser(_id, req.body));
+        const id = req.params.id;
+        const status = "success";
+        const resultado = await userController.updateUser(id, req.body);
+        res.json(resultado);
     } catch (error) {
         return status(500).json({
             message: "Server Error"
