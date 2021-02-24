@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://c0.klipartz.com/pngpicture/775/621/gratis-png-claqueta-cine-cine-ordenador-iconos-juntas-corporativas.png" alt="Project logo"></a>
+ <img width=200px height=200px src="https://png.pngtree.com/element_our/png/20181113/clapperboard-film-logo-icon-design-template-vector-isolated-png_236642.jpg" alt="Project logo"></a>
 </p>
 
 <h3 align="center">movieBackend</h3>
@@ -8,119 +8,85 @@
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
 
 ---
 
-<p align="center"> Few lines describing your project.
+<p align="center"> 
     <br> 
 </p>
 
-## 📝 Table of Contents
+## 📝 Tabla de Contenidos
 
-- [About](#about)
+- [Acerca de este proyecto](#about)
 - [Getting Started](#getting_started)
-- [Deployment](#deployment)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [TODO](../TODO.md)
+- [Desarrollo](#deployment)
+- [Uso](#usage)
+- [Herramientas](#built_using)
+- [Testing](#tests)
 - [Contributing](../CONTRIBUTING.md)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
+- [Autores](#authors)
+- [Agradecimientos](#acknowledgement)
 
-## 🧐 About <a name = "about"></a>
+## 🧐 Acerca de este proyecto... <a name = "about"></a>
 
+Este proyecto backend es una API Rest de búsqueda y alquiler de películas. Se ha desarrollado respetando la metodología de CRUD (Create, Read, Update and Delete), en la que a través del protocolo http se pueden obtener, modificar, borrar o añadir datos. 
 
-Write about 1-2 paragraphs describing the purpose of your project.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+Para poder ver la colección del proyecto y empezar con la búsqueda de películas, haz click en el siguiente botón: 
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/4cfcfe2c5fe3a1894bc2)
 
-https://documenter.getpostman.com/view/14551978/TWDamauM
+Para ver más detalles acerca de la colección y los datos usados para este proyecto, ve a la sección [deployment](#deployment).
 
-### Prerequisites
 
-Para poder ejecutar este programa es necesario tener instaladas las herramientas de Postman
+### Prerrequisitos e Instalación 
 
-What things you need to install the software and how to install them.
+Para poder ejecutar este programa es necesario tener instaladas las herramientas de Postman, el acceso al servidor así como a la base de datos. 
 
-```
-Give examples
-```
 
-### Installing
+## 🔧 Testing <a name = "tests"></a>
 
-A step by step series of examples that tell you how to get a development env running.
+Todas las pruebas se han realizado a través de la herramienta Postman.
 
-Say what the step will be
 
-```
-Give the example
-```
+## 🎈 Uso <a name="usage"></a>
 
-And repeat
+Para poder ejecutar este proyecto backend se deberán realizar las búsquedas a través de la herramienta Postman. Dentro de ésta, se encuentra la colección en la que se desarrolla el método CRUD, dividida a su vez en tres secciones diferenciadas: 
+- Películas
+- Usuarios
+- Pedidos
 
-```
-until finished
-```
+En cada una de las carpetas se encuentran las búsquedas por ID, por título en el caso de las películas, así como la totalidad de las películas, usuarios y pedidos. Además, incluye también las funciones de actualizar o modificar datos de los tres apartados, borrarlos mediante ID y generar una nueva película, usuario o pedido. 
 
-End with an example of getting some data out of the system or using it for a little demo.
 
-## 🔧 Running the tests <a name = "tests"></a>
+## 🚀 Desarrollo <a name = "deployment"></a>
 
-Explain how to run the automated tests for this system.
+Para poder llevar a cabo un seguimiento del proceso de este proyecto, se puede revisar la documentación que a continuación se adjunta acerca del trabajo en Postman, así como el flujo de trabajo a través de los commits en GitHub. 
+- [Postman](https://documenter.getpostman.com/view/14551978/TWDamauM)
+- [GitHub](https://github.com/LauraPorto/movieBackend)
 
-### Break down into end to end tests
+## ⛏️ Herramientas <a name = "built_using"></a>
 
-Explain what these tests test and why
+- [MongoDB](https://www.mongodb.com/)
+- [Express](https://expressjs.com/)
+- [Mongoose](https://mongoosejs.com/)
+- [NodeJs](https://nodejs.org/en/) 
+- [Postman](https://www.postman.com/) 
+- [Docker](https://www.docker.com/) 
+- [JavaScript](https://www.javascript.com/) 
+- [Nodemon](https://nodemon.io/) 
+- [Git](https://git-scm.com/) 
 
-```
-Give an example
-```
+## ✍️ Autor <a name = "authors"></a>
 
-### And coding style tests
+Trabajo realizado por [@LauraPorto](https://github.com/LauraPorto) 
 
-Explain what these tests test and why
 
-```
-Give an example
-```
+## 🎉 Agradecimientos <a name = "acknowledgement"></a>
 
-## 🎈 Usage <a name="usage"></a>
-
-Add notes about how to use the system.
-
-## 🚀 Deployment <a name = "deployment"></a>
-
-Add additional notes about how to deploy this on a live system.
-
-## ⛏️ Built Using <a name = "built_using"></a>
-
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [Mongoose](https://mongoosejs.com/) - ODM
-- [NodeJs](https://nodejs.org/en/) - Server Environment
-- [Postman](https://www.postman.com/) -
-- [Docker](https://www.docker.com/) - 
-- [JavaScript](https://www.javascript.com/) - 
-- [Nodemon](https://nodemon.io/) - 
-- [Git](https://git-scm.com/) - 
-
-## ✍️ Authors <a name = "authors"></a>
-
-- [@LauraPorto](https://github.com/LauraPorto) - Idea & Initial work
-
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
-
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+A todos los compañeros, siempre dispuestos a dar apoyo y ayudar en la batalla de código. 
