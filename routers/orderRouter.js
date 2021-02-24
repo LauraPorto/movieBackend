@@ -17,7 +17,7 @@ orderRouter.get('/orders', async(req, res) => {
 
 
 //Buscar petición por ID
-orderRouter.get('/search-order/:id', async(req, res) => {
+orderRouter.get('/find-order/:id', async(req, res) => {
     try {
         const id = req.params.id;
         let resultado = await orderController.findOrderById(id);

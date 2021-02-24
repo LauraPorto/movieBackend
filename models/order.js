@@ -6,10 +6,12 @@ let orderSchema = mongoose.Schema({
     userId: {
         type: ObjectId,
         required: true,
+        ref: 'User'
     },
     filmId: {
         type: ObjectId,
-        required: true
+        required: true,
+        ref: 'Film'
     },
     initDate: {
         type: Date,
@@ -21,7 +23,10 @@ let orderSchema = mongoose.Schema({
     },
     paymentMethod: {
         type: String,
-        required: true
+    },
+    price: {
+        type: String,
+        default: "5 eu"
     }
 });
 
